@@ -1,0 +1,331 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "[h1]ASUKA / Neon Genesis Evangelion[/h1]\n\n[h2]Features:[/h2]\n[list]\n    [*] Spotify Integration.\n    [*] Audio Responsive.\n    [*] Calendar.\n    [*] Clock.\n    [*] Weather.\n    [*] Schedule.\n    [*] Notes.\n[/list]\n\n[h2]ALERT NOTE:[/h2]\n[i]If you are experiencing issues with the wallpaper colors, it's because Wallpaper Engine, and the color system changed from HEX to RGB. You just have to click on \"Browse Preset\" almost in the end of the properties tab and download the default one.[/i]\n\n[h2]Configuration Guide:[/h2]\n[i]Following my guide, you will be able to create your own Weather API, activate your Spotify integration and customize your brand new Schedule and Notes system.[/i]\nOpen my guide by clicking: [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2298723356]Here ♥[/url][/b]\n\n\n[h2]Support me via Ko-Fi:[/h2]\n[i]Supporting me, means I can keep working on new functions and crazy wallpapers for the community, if you would like, with a small tip is more than enough ♥[/i]\n[list]\n[*]You can do it by clicking: [b][url=https://ko-fi.com/noxt666]Here ♥[/url][/b]\n[/list]",
+	"file" : "asuka.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"accentColor1" : 
+			{
+				"order" : 28,
+				"text" : "Accent Color",
+				"type" : "color",
+				"value" : "1 0 0"
+			},
+			"backgroundColor" : 
+			{
+				"order" : 38,
+				"text" : "Background Color",
+				"type" : "color",
+				"value" : "0.14901960784313725 0.14901960784313725 0.1450980392156863"
+			},
+			"cleanSchedule" : 
+			{
+				"condition" : "cleanSchedule.value ? cleanSchedule.text = cleanSchedule.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : cleanSchedule.text = cleanSchedule.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"order" : 102,
+				"text" : "<span class='ugcDanger'>Clean Schedule Memory (Disabled)</span>",
+				"type" : "bool",
+				"value" : false
+			},
+			"copySchedule" : 
+			{
+				"condition" : "copySchedule.value ? copySchedule.text = copySchedule.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : copySchedule.text = copySchedule.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"order" : 100,
+				"text" : "<span class='ugcDanger'>Copy Schedule (Disabled)</span>",
+				"type" : "bool",
+				"value" : false
+			},
+			"copyScheduleSideNote" : 
+			{
+				"order" : 101,
+				"text" : "<span class='ugcSub'>Remember to disable this option as soon as your schedule is already copied to your clipboard.</span><br><br>"
+			},
+			"customization" : 
+			{
+				"order" : 105,
+				"text" : "<a href='https://steamcommunity.com/sharedfiles/filedetails/?id=2298723356'>Check Weather/Schedule/Notes/Spotify Tutorial</a><span class='ugcSub'> (click for details)</span>"
+			},
+			"displayCalendar" : 
+			{
+				"order" : 3,
+				"text" : "Calendar",
+				"type" : "bool",
+				"value" : true
+			},
+			"displayClock" : 
+			{
+				"order" : 4,
+				"text" : "Clock",
+				"type" : "bool",
+				"value" : true
+			},
+			"displayNotes" : 
+			{
+				"order" : 6,
+				"text" : "Notes",
+				"type" : "bool",
+				"value" : true
+			},
+			"displaySchedule" : 
+			{
+				"order" : 5,
+				"text" : "Schedule",
+				"type" : "bool",
+				"value" : true
+			},
+			"displayWeather" : 
+			{
+				"condition" : "displayWeather.value ? displayWeather.text = displayWeather.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : displayWeather.text = displayWeather.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"order" : 10,
+				"text" : "<span class='ugcDanger'>Weather (Enabled)</span>",
+				"type" : "bool",
+				"value" : true
+			},
+			"displayWeatherForecast" : 
+			{
+				"condition" : "displayWeatherForecast.value ? displayWeatherForecast.text = displayWeatherForecast.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : displayWeatherForecast.text = displayWeatherForecast.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"order" : 11,
+				"text" : "<span class='ugcDanger'>Weather Forecast (Enabled)</span>",
+				"type" : "bool",
+				"value" : true
+			},
+			"hueBrightness" : 
+			{
+				"max" : 200,
+				"min" : 0,
+				"order" : 34,
+				"text" : "Brightness",
+				"type" : "slider",
+				"value" : 100
+			},
+			"hueContrast" : 
+			{
+				"max" : 200,
+				"min" : 0,
+				"order" : 36,
+				"text" : "Contrast",
+				"type" : "slider",
+				"value" : 100
+			},
+			"hueRotation" : 
+			{
+				"max" : 360,
+				"min" : 0,
+				"order" : 33,
+				"text" : "Hue Rotation",
+				"type" : "slider",
+				"value" : 0
+			},
+			"hueSaturation" : 
+			{
+				"max" : 200,
+				"min" : 0,
+				"order" : 35,
+				"text" : "Saturation",
+				"type" : "slider",
+				"value" : 100
+			},
+			"maxHeight" : 
+			{
+				"max" : 300,
+				"min" : 0,
+				"order" : 8,
+				"text" : "Bars Height",
+				"type" : "slider",
+				"value" : 120
+			},
+			"memoryScheduleSideNote" : 
+			{
+				"order" : 103,
+				"text" : "<span class='ugcSub'>This option will clean your memory, not your file. This should be used when you want to reset your schedule to default.</span><br><br>"
+			},
+			"normalizeAudio" : 
+			{
+				"order" : 7,
+				"text" : "Normalize Audio",
+				"type" : "bool",
+				"value" : true
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0 0 0"
+			},
+			"separate" : 
+			{
+				"order" : 9,
+				"text" : "<span class='ugcSub'>- - - WEATHER - - - -</span>"
+			},
+			"separate2" : 
+			{
+				"order" : 17,
+				"text" : "<span class='ugcSub'>- - - SPOTIFY - - - -</span>"
+			},
+			"separate3" : 
+			{
+				"order" : 27,
+				"text" : "<span class='ugcSub'>- - - COLOR CUSTOMIZATION - - - -</span>"
+			},
+			"separate4" : 
+			{
+				"order" : 32,
+				"text" : "<span class='ugcSub'>- - - ASUKA SHADOW - - - -</span>"
+			},
+			"separate5" : 
+			{
+				"order" : 37,
+				"text" : "<span class='ugcSub'>- - - BACKGROUND AND BAR - - - -</span>"
+			},
+			"separate6" : 
+			{
+				"order" : 99,
+				"text" : "<span class='ugcSub'>- - - SCHEDULE AND NOTES MANANGER - - - -</span>"
+			},
+			"spotifyAPI" : 
+			{
+				"condition" : "spotifyAPI.value ? spotifyAPI.text = spotifyAPI.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : spotifyAPI.text = spotifyAPI.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"order" : 18,
+				"text" : "<span class='ugcDanger'>Spotify API (Disabled)</span>",
+				"type" : "bool",
+				"value" : false
+			},
+			"spotifyAuthCode" : 
+			{
+				"condition" : "spotifyAPI.value",
+				"order" : 24,
+				"type" : "textinput",
+				"value" : ""
+			},
+			"spotifyAuthCodeText" : 
+			{
+				"condition" : "spotifyAPI.value",
+				"order" : 23,
+				"text" : "Spotify Authorization Code:"
+			},
+			"spotifyClientID" : 
+			{
+				"condition" : "spotifyAPI.value",
+				"order" : 20,
+				"type" : "textinput",
+				"value" : ""
+			},
+			"spotifyClientIDText" : 
+			{
+				"condition" : "spotifyAPI.value",
+				"order" : 19,
+				"text" : "Spotify Client ID:"
+			},
+			"spotifyClientSecret" : 
+			{
+				"condition" : "spotifyAPI.value",
+				"order" : 22,
+				"type" : "textinput",
+				"value" : ""
+			},
+			"spotifyClientSecretText" : 
+			{
+				"condition" : "spotifyAPI.value",
+				"order" : 21,
+				"text" : "Spotify Client Secret:"
+			},
+			"spotifyResetMemory" : 
+			{
+				"condition" : "spotifyAPI.value",
+				"order" : 25,
+				"text" : "Reset Spotify API Memory",
+				"type" : "bool",
+				"value" : false
+			},
+			"support" : 
+			{
+				"order" : 104,
+				"text" : "<a href='https://ko-fi.com/noxt666'>Support me here ♥</a><span class='ugcSub'> (click for details)</span>"
+			},
+			"textColor1" : 
+			{
+				"order" : 30,
+				"text" : "Primary Text Color",
+				"type" : "color",
+				"value" : "0.3137254901960784 0.3137254901960784 0.3137254901960784"
+			},
+			"textColor2" : 
+			{
+				"order" : 31,
+				"text" : "Secondary Text Color",
+				"type" : "color",
+				"value" : "0.7333333333333333 0.7333333333333333 0.7333333333333333"
+			},
+			"tiltedBarColor" : 
+			{
+				"order" : 39,
+				"text" : "Tilted Bar Color",
+				"type" : "color",
+				"value" : "0.5019607843137255 0.5019607843137255 0.5019607843137255"
+			},
+			"version" : 
+			{
+				"order" : 98,
+				"text" : "Version: 1.3<span class='ugcSub'> (Changelog in Workshop)</span>"
+			},
+			"visColor" : 
+			{
+				"order" : 29,
+				"text" : "Visualizer Color",
+				"type" : "color",
+				"value" : "1 0 0"
+			},
+			"weatherAPIKey" : 
+			{
+				"order" : 13,
+				"type" : "textinput",
+				"value" : ""
+			},
+			"weatherAPIText" : 
+			{
+				"order" : 12,
+				"text" : "AccuWeather API Key:"
+			},
+			"weatherLocation" : 
+			{
+				"order" : 15,
+				"type" : "textinput",
+				"value" : ""
+			},
+			"weatherLocationText" : 
+			{
+				"order" : 14,
+				"text" : "City Name:"
+			},
+			"weatherTemperature" : 
+			{
+				"options" : 
+				[
+					{
+						"label" : "°C",
+						"value" : "Metric"
+					},
+					{
+						"label" : "°F",
+						"value" : "Imperial"
+					}
+				],
+				"order" : 16,
+				"text" : "Temp",
+				"type" : "combo",
+				"value" : "Metric"
+			}
+		},
+		"supportsaudioprocessing" : true
+	},
+	"preview" : "preview.gif",
+	"tags" : [ "Anime" ],
+	"title" : "ASUKA / Neon Genesis Evangelion",
+	"type" : "web",
+	"version" : 17,
+	"visibility" : "public",
+	"workshopid" : "2298673278",
+	"workshopurl" : "steam://url/CommunityFilePage/2298673278"
+}
