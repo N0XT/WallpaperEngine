@@ -1,6 +1,6 @@
 {
 	"contentrating" : "Everyone",
-	"description" : "[h1]ASUKA / Neon Genesis Evangelion[/h1]\n\n[h2]Features:[/h2]\n[list]\n    [*] Spotify Integration.\n    [*] Audio Responsive.\n    [*] Calendar.\n    [*] Clock.\n    [*] Weather.\n    [*] Schedule.\n    [*] Notes.\n[/list]\n\n[h2]ALERT NOTE:[/h2]\n[i]If you are experiencing issues with the wallpaper colors, it's because Wallpaper Engine, and the color system changed from HEX to RGB. You just have to click on \"Browse Preset\" almost in the end of the properties tab and download the default one.[/i]\n\n[h2]Configuration Guide:[/h2]\n[i]Following my guide, you will be able to create your own Weather API, activate your Spotify integration and customize your brand new Schedule and Notes system.[/i]\nOpen my guide by clicking: [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2298723356]Here ♥[/url][/b]\n\n\n[h2]Support me via Ko-Fi:[/h2]\n[i]Supporting me, means I can keep working on new functions and crazy wallpapers for the community, if you would like, with a small tip is more than enough ♥[/i]\n[list]\n[*]You can do it by clicking: [b][url=https://ko-fi.com/noxt666]Here ♥[/url][/b]\n[/list]",
+	"description" : "[h1]ASUKA / Neon Genesis Evangelion[/h1]\r\n\r\n[h2]Features:[/h2]\r\n[list]\r\n    [*] Spotify Integration.\r\n    [*] Audio Responsive.\r\n    [*] Calendar.\r\n    [*] Clock.\r\n    [*] Weather.\r\n    [*] Schedule.\r\n    [*] Notes.\r\n    [*] Customizable.\r\n[/list]\r\n\r\n[h2]Configuration Guide:[/h2]\r\n[i]Following my guide, you will be able to create your own Weather API, activate your Spotify integration and customize your brand new Schedule and Notes system.[/i]\r\nOpen my guide by clicking: [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2298723356]Here ♥[/url][/b]\r\n\r\n\r\n[h2]Support me via Ko-Fi:[/h2]\r\n[i]Supporting me, means I can keep working on new functions and crazy wallpapers for the community, if you would like, with a small tip is more than enough ♥[/i]\r\n[list]\r\n[*]You can do it by clicking: [b][url=https://ko-fi.com/noxt666]Here ♥[/url][/b]\r\n[/list]",
 	"file" : "asuka.html",
 	"general" : 
 	{
@@ -15,7 +15,7 @@
 			},
 			"backgroundColor" : 
 			{
-				"order" : 38,
+				"order" : 47,
 				"text" : "Background Color",
 				"type" : "color",
 				"value" : "0.14901960784313725 0.14901960784313725 0.1450980392156863"
@@ -44,7 +44,7 @@
 			"customization" : 
 			{
 				"order" : 105,
-				"text" : "<a href='https://steamcommunity.com/sharedfiles/filedetails/?id=2298723356'>Check Weather/Schedule/Notes/Spotify Tutorial</a><span class='ugcSub'> (click for details)</span>"
+				"text" : "<a href='https://steamcommunity.com/sharedfiles/filedetails/?id=2298723356'>Check Configuration Tutorial</a><span class='ugcSub'> (click for details)</span>"
 			},
 			"displayCalendar" : 
 			{
@@ -90,41 +90,13 @@
 				"type" : "bool",
 				"value" : true
 			},
-			"hueBrightness" : 
+			"invertSideBar" : 
 			{
-				"max" : 200,
-				"min" : 0,
-				"order" : 34,
-				"text" : "Brightness",
-				"type" : "slider",
-				"value" : 100
-			},
-			"hueContrast" : 
-			{
-				"max" : 200,
-				"min" : 0,
-				"order" : 36,
-				"text" : "Contrast",
-				"type" : "slider",
-				"value" : 100
-			},
-			"hueRotation" : 
-			{
-				"max" : 360,
-				"min" : 0,
-				"order" : 33,
-				"text" : "Hue Rotation",
-				"type" : "slider",
-				"value" : 0
-			},
-			"hueSaturation" : 
-			{
-				"max" : 200,
-				"min" : 0,
-				"order" : 35,
-				"text" : "Saturation",
-				"type" : "slider",
-				"value" : 100
+				"condition" : "false",
+				"order" : 2,
+				"text" : "<span class='ugcDanger'>Invert Side Bar</span>",
+				"type" : "bool",
+				"value" : false
 			},
 			"maxHeight" : 
 			{
@@ -154,7 +126,12 @@
 				"type" : "color",
 				"value" : "0 0 0"
 			},
-			"separate" : 
+			"separate0" : 
+			{
+				"order" : 1,
+				"text" : "<span class='ugcSub'>- - - SIDE BAR - - - -</span>"
+			},
+			"separate1" : 
 			{
 				"order" : 9,
 				"text" : "<span class='ugcSub'>- - - WEATHER - - - -</span>"
@@ -172,17 +149,66 @@
 			"separate4" : 
 			{
 				"order" : 32,
-				"text" : "<span class='ugcSub'>- - - ASUKA SHADOW - - - -</span>"
+				"text" : "<span class='ugcSub'>- - - CHARACTER - - - -</span>"
 			},
 			"separate5" : 
 			{
-				"order" : 37,
-				"text" : "<span class='ugcSub'>- - - BACKGROUND AND BAR - - - -</span>"
+				"order" : 39,
+				"text" : "<span class='ugcSub'>- - - SHADOW - - - -</span>"
 			},
 			"separate6" : 
 			{
+				"order" : 46,
+				"text" : "<span class='ugcSub'>- - - BACKGROUND AND BAR - - - -</span>"
+			},
+			"separate7" : 
+			{
 				"order" : 99,
 				"text" : "<span class='ugcSub'>- - - SCHEDULE AND NOTES MANANGER - - - -</span>"
+			},
+			"separate8" : 
+			{
+				"condition" : "wallOfSupportersToggle.value",
+				"order" : 108,
+				"text" : "<span class='ugcSub'>- - - - MONTHLY SUPPORTERS ♥ - - - -</span>"
+			},
+			"shadowAdvancedText" : 
+			{
+				"condition" : "shadowAdvancedText.value ? shadowAdvancedText.text = shadowAdvancedText.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : shadowAdvancedText.text = shadowAdvancedText.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"order" : 42,
+				"text" : "<span class='ugcDanger'>Shadow Advanced Settings</span>",
+				"type" : "bool",
+				"value" : false
+			},
+			"shadowScale" : 
+			{
+				"condition" : "shadowAdvancedText.value",
+				"max" : 100,
+				"min" : 0,
+				"order" : 45,
+				"text" : "Shadow Size",
+				"type" : "slider",
+				"value" : 100
+			},
+			"shadowX" : 
+			{
+				"condition" : "shadowAdvancedText.value",
+				"max" : 100,
+				"min" : -100,
+				"order" : 43,
+				"text" : "Left - Right",
+				"type" : "slider",
+				"value" : 45
+			},
+			"shadowY" : 
+			{
+				"condition" : "shadowAdvancedText.value",
+				"max" : 100,
+				"min" : -100,
+				"order" : 44,
+				"text" : "Up - Down",
+				"type" : "slider",
+				"value" : 20
 			},
 			"spotifyAPI" : 
 			{
@@ -260,15 +286,15 @@
 			},
 			"tiltedBarColor" : 
 			{
-				"order" : 39,
+				"order" : 48,
 				"text" : "Tilted Bar Color",
 				"type" : "color",
 				"value" : "0.5019607843137255 0.5019607843137255 0.5019607843137255"
 			},
 			"version" : 
 			{
-				"order" : 98,
-				"text" : "Version: 1.3<span class='ugcSub'> (Changelog in Workshop)</span>"
+				"order" : 106,
+				"text" : "Version: 1.3.3<span class='ugcSub'> (Changelog in Workshop)</span>"
 			},
 			"visColor" : 
 			{
@@ -276,6 +302,89 @@
 				"text" : "Visualizer Color",
 				"type" : "color",
 				"value" : "1 0 0"
+			},
+			"waifuAdvancedText" : 
+			{
+				"condition" : "waifuAdvancedText.value ? waifuAdvancedText.text = waifuAdvancedText.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : waifuAdvancedText.text = waifuAdvancedText.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"order" : 35,
+				"text" : "<span class='ugcDanger'>Character Advanced Settings</span>",
+				"type" : "bool",
+				"value" : false
+			},
+			"waifuInvert" : 
+			{
+				"condition" : "waifuSelector.value",
+				"order" : 34,
+				"text" : "Invert Character",
+				"type" : "bool",
+				"value" : false
+			},
+			"waifuScale" : 
+			{
+				"condition" : "waifuAdvancedText.value",
+				"max" : 100,
+				"min" : 0,
+				"order" : 38,
+				"text" : "Character Size",
+				"type" : "slider",
+				"value" : 100
+			},
+			"waifuSelector" : 
+			{
+				"fileType" : "image",
+				"order" : 33,
+				"text" : "Your Character (PNG)",
+				"type" : "file"
+			},
+			"waifuShadowColor" : 
+			{
+				"order" : 40,
+				"text" : "Character Shadow Color",
+				"type" : "color",
+				"value" : "1 0 0"
+			},
+			"waifuShadowOpacity" : 
+			{
+				"max" : 100,
+				"min" : 0,
+				"order" : 41,
+				"text" : "Shadow Opacity",
+				"type" : "slider",
+				"value" : 100
+			},
+			"waifuX" : 
+			{
+				"condition" : "waifuAdvancedText.value",
+				"max" : 100,
+				"min" : -100,
+				"order" : 36,
+				"text" : "Left - Right",
+				"type" : "slider",
+				"value" : 0
+			},
+			"waifuY" : 
+			{
+				"condition" : "waifuAdvancedText.value",
+				"max" : 100,
+				"min" : -100,
+				"order" : 37,
+				"text" : "Up - Down",
+				"type" : "slider",
+				"value" : 0
+			},
+			"wallOfSupporters" : 
+			{
+				"condition" : "wallOfSupportersToggle.value",
+				"order" : 109,
+				"text" : "<span class='ugcSub'>~ ~</span> Tom <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Christopher <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> 장한윤 <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Chase <span class='ugcDanger'>♥</span>"
+			},
+			"wallOfSupportersToggle" : 
+			{
+				"condition" : "wallOfSupportersToggle.value ? wallOfSupportersToggle.text = wallOfSupportersToggle.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : wallOfSupportersToggle.text = wallOfSupportersToggle.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"order" : 107,
+				"text" : "<span class='ugcDanger'>View Wall of Supporters (Enabled)</span>",
+				"type" : "bool",
+				"value" : true
 			},
 			"weatherAPIKey" : 
 			{
@@ -323,8 +432,8 @@
 	"preview" : "preview.gif",
 	"tags" : [ "Anime" ],
 	"title" : "ASUKA / Neon Genesis Evangelion",
-	"type" : "web",
-	"version" : 17,
+	"type" : "Web",
+	"version" : 20,
 	"visibility" : "public",
 	"workshopid" : "2298673278",
 	"workshopurl" : "steam://url/CommunityFilePage/2298673278"
