@@ -18,36 +18,45 @@
     <img id="asistenteImagen" style="display: none;">
     <canvas id="personaje"></canvas>
     <canvas id="sombra"></canvas>
-    <canvas id="inclinada" width="1920" height="1080"></canvas>
     <canvas id="spotify_canvas" width="1920" height="1080"></canvas>
     <canvas id="audio_canvas" width="1920" height="1080"></canvas>
+    <canvas id="inclinada" width="1920" height="1080"></canvas>
     <div id="informacionLateral">
         <a id="monthYear"> <!-- No te quejes, no puedo poner "año", prefiero en inglés antes que poner "ano" -->
             <span></span>
             <span></span>
         </a>
-        <table id="calendario"></table>
-        <a id="hora">
-            <span>00:00 AM</span>
-        </a>
+        <div id="contenedorCalendario">
+            <table id="calendario"></table>
+        </div>
+        <div id="contenedorHora">
+            <a id="hora">
+                <span>00:00 AM</span>
+            </a>
+        </div>
         <span></span>
-        <a id="climaTitulo">WEATHER: <span><i class="wi wi-day-sunny"></i>LOADING...</span></a>
-        <table id="clima">
-            <tr><td><i class="wi wi-day-sunny"></i> LOADING</td><td>...</td></tr>
-            <tr><td><i class="wi wi-day-sunny"></i> LOADING</td><td>...</td></tr>
-            <tr><td><i class="wi wi-day-sunny"></i> LOADING</td><td>...</td></tr>
-        </table>
-        <a id="cronogramaTitulo">SCHEDULE:</a>
-        <table id="cronograma">
-        	<tr><td>EMPTY</td><td>/ EMPTY</td></tr>
-        	<tr><td>EMPTY</td><td>/ EMPTY</td></tr>
-        	<tr><td>EMPTY</td><td>/ EMPTY</td></tr>
-        	<tr><td>EMPTY</td><td>/ EMPTY</td></tr>
-        	<tr><td>EMPTY</td><td>/ EMPTY</td></tr>
-        </table>
-        <div id="notas">
-            <a>EMPTY NOTE</a>
-            <u>Empty value</u>
+        <div id="contenedorClima">
+            <a id="climaTitulo">WEATHER: <span><i class="wi wi-day-sunny"></i>LOADING...</span></a>
+            <table id="clima">
+                <tr><td><i class="wi wi-day-sunny"></i> LOADING</td><td>...</td></tr>
+                <tr><td><i class="wi wi-day-sunny"></i> LOADING</td><td>...</td></tr>
+                <tr><td><i class="wi wi-day-sunny"></i> LOADING</td><td>...</td></tr>
+            </table>
+        </div>
+        <div id="contenedorCronogramaNotas">
+            <a id="cronogramaTitulo">SCHEDULE:</a>
+            <br>
+            <table id="cronograma">
+                <tr><td>EMPTY</td><td>/ EMPTY</td></tr>
+                <tr><td>EMPTY</td><td>/ EMPTY</td></tr>
+                <tr><td>EMPTY</td><td>/ EMPTY</td></tr>
+                <tr><td>EMPTY</td><td>/ EMPTY</td></tr>
+                <tr><td>EMPTY</td><td>/ EMPTY</td></tr>
+            </table>
+            <div id="notas">
+                <a>EMPTY NOTE</a>
+                <u>Empty value</u>
+            </div>
         </div>
         <!-- ONLY DEV USE -->
         <div id="log" style="display: none; color: red; font-size: 18px; margin-left: 65px;"></div>

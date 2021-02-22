@@ -25,23 +25,27 @@ body {
     overflow: hidden;
     font-family: "Odibee Sans";
 }
-
 #audio_canvas {
     position: absolute;
     z-index: 2;
     right: 0;
-    width: 100%;
+    width: auto;
     height: 100%;
 }
-
 #spotify_canvas {
     position: absolute;
     z-index: 5;
-    width: 100%;
-    height: 100%;
     right: 0;
+    width: auto;
+    height: 100%;
 }
-
+#inclinada {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    width: auto;
+    height: 100%;
+}
 #sombra {
     position: absolute;
     z-index: 3;
@@ -50,7 +54,6 @@ body {
     right: 0;
     height: 100%;
 }
-
 #personaje {
     position: absolute;
     z-index: 4;
@@ -60,18 +63,166 @@ body {
     height: 100%;
 }
 
-#inclinada {
+/*
+    ------------------
+    INFORMATION PANNEL
+    ------------------
+*/
+
+#informacionLateral {
     position: absolute;
-    z-index: 1;
-    width: 100%;
-    right: 0;
-    height: 100%;
+    z-index: 6;
+    float: left;
+    font-size: 4vh;
+    margin-left: 1%;
+    margin-top: 2%;
+    opacity: 0;
+}
+#monthYear {
+    display: inline-block;
+    padding: 10px;
+    font-size: 1em;
+    color: var(--schemeColor);
+    margin-bottom: 10px;
+}
+#contenedorCalendario {
+    padding: 10px;
+    max-width: fit-content;
+    margin-bottom: 10px;
+}
+#calendario {
+    z-index: 4;
+    width: 265px;
+    text-align: center;
+    font-size: 0.5em;
+    color: var(--font2);
+    letter-spacing: 2px;
+}
+#calendario tr:first-child {
+    font-weight: bold;
+    color: var(--schemeColor);
+    background-color: transparent;
+}
+#calendario tr td {
+    padding: 5px;
+}
+#calendario .pasado {
+    color: var(--font1);
+}
+#calendario .dia {
+    color: var(--schemeColor);
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+}
+#calendario.espaciado {
+    margin-top: 99px;
+}
+#contenedorHora {
+    display: block;
+    padding: 10px;
+    padding-bottom: 5px;
+    max-width: fit-content;
+}
+#hora {
+    display: inline-block;
+    font-size: 1em;
+    color: var(--schemeColor);
+}
+#contenedorClima {
+    margin-top: 10px;
+    padding: 10px;
+}
+#climaTitulo {
+    display: block;
+    font-size: 0.7em;
+    color: var(--schemeColor);
+}
+#climaTitulo span {
+    margin-left: 6px;
+    color: var(--font2);
+}
+#climaTitulo span i {
+    margin-right: 5px;
+}
+#climaAhora {
+    display: block;
+    margin-top: 3px;
+    margin-left: 10px;
+    font-size: 0.5em;
+    letter-spacing: 2px;
+    color: var(--font2);
+}
+#clima {
+    display: block;
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 0.5em;
+    letter-spacing: 2px;
+    color: var(--font1);
+}
+#clima tr td:first-child {
+    padding-right: 26px;
+}
+#clima tr td:last-child {
+    letter-spacing: 0px;
+}
+#contenedorCronogramaNotas {
+    width: fit-content;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+#cronogramaTitulo {
+    display: block;
+    font-size: 0.7em;
+    color: var(--schemeColor);
+    letter-spacing: 1px;
+}
+#cronograma {
+    display: table;
+    margin-top: -35px;
+    max-width: fit-content;
+    margin-left: 10px;
+    font-size: 0.5em;
+    letter-spacing: 2px;
+    color: var(--font1);
+}
+.current td:first-child {
+    color: var(--schemeColor);
+    text-decoration: underline;
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+}
+.current td:last-child {
+    color: var(--font2);
+}
+#notas {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    font-size: 0.5em;
+    color: var(--font1);
+    letter-spacing: 2px;
+}
+#notas a {
+    padding: 3px 0px;
+}
+#notas u {
+    color: var(--schemeColor);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
 }
 
 /*
-        ------
-        ALERTS
-        ------
+    ------
+    ALERTS
+    ------
 */
 .alertas {
     display: flex;
@@ -114,133 +265,4 @@ body {
 }
 .contenedorAlerta .chico {
     font-size: 21px;
-}
-
-/*
-        ------------------
-        INFORMATION PANNEL
-        ------------------
-*/
-#informacionLateral {
-    position: absolute;
-    z-index: 6;
-    opacity: 0;
-}
-#monthYear {
-    display: block;
-    margin-left: 5px;
-    font-size: 44px;
-    color: var(--schemeColor);
-}
-#calendario {
-    z-index: 4;
-    width: 280px;
-    text-align: center;
-    font-size: 24px;
-    color: var(--font2);
-    letter-spacing: 2px;
-}
-#calendario tr:first-child {
-    font-weight: bold;
-    font-size: 24px;
-    color: var(--schemeColor);
-    background-color: transparent;
-}
-#calendario tr td {
-    padding: 5px;
-}
-#calendario .pasado {
-    color: var(--font1);
-}
-#calendario .dia {
-    color: var(--schemeColor);
-    font-weight: bold;
-    text-decoration: underline;
-    text-decoration-line: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 5px;
-}
-#calendario.espaciado {
-    margin-top: 99px;
-}
-#hora {
-    display: block;
-    font-size: 44px;
-    color: var(--schemeColor);
-}
-#climaTitulo {
-    display: block;
-    margin-top: 35px;
-    font-size: 28px;
-    color: var(--schemeColor);
-}
-#climaTitulo span {
-    margin-left: 6px;
-    color: var(--font2);
-}
-#climaTitulo span i {
-    margin-right: 5px;
-}
-#climaAhora {
-    display: block;
-    margin-top: 3px;
-    margin-left: 10px;
-    font-size: 24px;
-    letter-spacing: 2px;
-    color: var(--font2);
-}
-#clima {
-    display: block;
-    margin-top: 15px;
-    margin-left: 10px;
-    font-size: 24px;
-    letter-spacing: 2px;
-    color: var(--font1);
-}
-#clima tr td:first-child {
-    padding-right: 26px;
-}
-#clima tr td:last-child {
-    letter-spacing: 0px;
-}
-#cronogramaTitulo {
-    display: block;
-    padding-top: 35px;
-    font-size: 28px;
-    color: var(--schemeColor);
-    letter-spacing: 1px;
-}
-#cronograma {
-    margin-left: 10px;
-    font-size: 24px;
-    letter-spacing: 2px;
-    color: var(--font1);
-}
-.current td:first-child {
-    color: var(--schemeColor);
-    text-decoration: underline;
-    text-decoration-line: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 5px;
-}
-.current td:last-child {
-    color: var(--font2);
-}
-#notas {
-    display: block;
-    margin-left: 10px;
-    margin-top: 30px;
-    font-size: 24px;
-    color: var(--font1);
-    letter-spacing: 2px;
-}
-#notas a {
-    display: block;
-    padding: 3px 0px;
-}
-#notas u {
-    color: var(--schemeColor);
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 5px;
 }
