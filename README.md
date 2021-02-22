@@ -2,10 +2,10 @@
 
 ## Here is a list of all my wallpapers:
 
-+ ASUKA / Neon Genesis Evangelion **[(ASUKA-NGE)](https://github.com/N0XT/WallpaperEngine/tree/main/ASUKA-NGE)**
-+ KG ~ Genshin Impact **[(KG-GI)](https://github.com/N0XT/WallpaperEngine/tree/main/KG-GI)**
-+ Minimalist Design **NOT GOING TO HAPPEN** 
++ ASUKA / Neon Genesis Evangelion - **[(ASUKA-NGE)](https://github.com/N0XT/WallpaperEngine/tree/main/ASUKA-NGE)**
++ KG ~ Genshin Impact - **[(KG-GI)](https://github.com/N0XT/WallpaperEngine/tree/main/KG-GI)**
 + Persona 5 / Take Your Heart - **SOON**
++ ??? - **SOON**
 + Extended Web Engine - **SOON**
 
 ## Licensing
