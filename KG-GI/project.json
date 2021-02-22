@@ -1,0 +1,41 @@
+{
+	"contentrating" : "Mature",
+	"description" : "Genshin Impact girls are a little bit weird tonight, maybe they want to give you a very nice present, who knows.\n\nThis wallpaper needs to be updated for ultrawide screens and 4k resolution.\n\nHas a clock and date system built in.",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"artworkDetails" : 
+			{
+				"order" : 1,
+				"text" : "<a href='https://www.pixiv.net/en/artworks/85213539'>Original artwork</a>"
+			},
+			"comment" : 
+			{
+				"order" : 3,
+				"text" : "<span class='ugcSub'>Made with love for my friend Sergio, by <b>N0XT</b>.<br></span>"
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "#ffffff"
+			},
+			"version" : 
+			{
+				"order" : 2,
+				"text" : "<a href='https://steamcommunity.com/sharedfiles/filedetails/?id=2338941962'>Version: 1.1</a><span class='ugcSub'> (Changelog in Workshop)</span>"
+			}
+		}
+	},
+	"preview" : "preview.gif",
+	"tags" : [ "Anime" ],
+	"title" : "KINKY GIRLS [Genshin Impact]",
+	"type" : "web",
+	"version" : 7,
+	"visibility" : "public",
+	"workshopid" : "2338941962",
+	"workshopurl" : "steam://url/CommunityFilePage/2338941962"
+}
