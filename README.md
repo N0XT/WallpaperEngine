@@ -4,7 +4,7 @@
 
 + ASUKA / Neon Genesis Evangelion **[(ASUKA-NGE)](https://github.com/N0XT/WallpaperEngine/tree/main/ASUKA-NGE)**
 + KG ~ Genshin Impact **[(KG-GI)](https://github.com/N0XT/WallpaperEngine/tree/main/KG-GI)**
-+ Minimalist Anime **[(MINI-A)](https://github.com/N0XT/WallpaperEngine/tree/main/MINI-A)**
++ Minimalist Design **NOT GOING TO HAPPEN** 
 + Persona 5 / Take Your Heart - **SOON**
 + Extended Web Engine - **SOON**
 
