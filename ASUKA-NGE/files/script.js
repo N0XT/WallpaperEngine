@@ -1,44 +1,6 @@
 window.onload = function () {
     window.wallpaperPropertyListener = {
         applyUserProperties: function (properties) {
-            // Version Control
-            if (properties.version) {
-                if (properties.version.text != localStorage.getItem("wallpaper_version")) {
-                    localStorage.setItem("wallpaper_version", properties.version.text);
-                    alerta.actualizacion(
-                        "SUPPORTERS ♥ / FEB, 2021",
-                        "This month supporters are:",
-                        `
-                            <dl>
-                                <dt>- Tom ♥ (Multi character selector)</dt>
-                                <dt>- Christopher ♥</dt>
-                                <dt>- 장한윤 ♥</dt>
-                                <dt>- Chase ♥</dt>
-                            </dl>
-                            <a class="chico">Thank you all for helping me in this little world, you are the best!</a>
-                            `
-                    );
-                    alerta.actualizacion(
-                        "UPDATE & PATCH NOTES / FEB 21, 2021",
-                        "ASUKA / Neon Genesis Evangelion has been updated",
-                        `
-                            <dl>
-                                <dt>New Content:</dt>
-                                    <dd>- Character customization, now you can select your own ♥.</dd>
-                                    <dd>- Full color customization.</dd>
-                                    <dd>- Schedule and Notes memory.</dd>
-                                    <dd>- Spotify memory wipe button.</dd>
-                                <dt>Patches:</dt>
-                                    <dd>- Audio visualizer finally fixed.</dd>
-                                    <dd>- Information display fixed.</dd>
-                                    <dd>- Spotify code reworked.</dd>
-                                    <dd>- Spotify alerts are more specific now.</dd>
-                            </dl>
-                            <a class="chico">If you enjoy this wallpaper please leave a like. And remember, if you want to leave a comment,<br>suggestion or report a bug, you can do it on the workshop page. Every single comment matters, always!</a>
-                        `
-                    );
-                }
-            }
             // Accent Color
             if (properties.accentColor1) {
                 if (properties.accentColor1.value) {
@@ -57,9 +19,51 @@ window.onload = function () {
                     setColor("--font2", properties.textColor2.value);
                 }
             }
+            // Version Control
+            if (properties.version) {
+                if (properties.version.text != localStorage.getItem("wallpaper_version")) {
+                    localStorage.setItem("wallpaper_version", properties.version.text);
+                    alerta.actualizacion(
+                        "SUPPORTERS ♥ / FEB, 2021",
+                        "This month supporters are:",
+                        `
+                            <dl>
+                                <dt>- Tom ♥ (Multi character selector)</dt>
+                                <dt>- Christopher ♥</dt>
+                                <dt>- 장한윤 ♥</dt>
+                                <dt>- Chase ♥</dt>
+                                <dt>- Neikea ♥</dt>
+                            </dl>
+                            <a class="chico">Thank you all for helping me in this little world, you are the best!</a>
+                            `
+                    );
+                    alerta.actualizacion(
+                        "UPDATE & PATCH NOTES / FEB 22, 2021",
+                        "ASUKA / Neon Genesis Evangelion has been updated",
+                        `
+                            <dl>
+                                <dt>New Content:</dt>
+                                    <dd>- Character and background customization, now you can select your own ♥.</dd>
+                                    <dd>- Full color customization.</dd>
+                                    <dd>- Schedule and Notes memory.</dd>
+                                    <dd>- Spotify memory wipe button.</dd>
+                                <dt>Patches:</dt>
+                                    <dd>- Visualizer and Spotify updated for ultrawide resolutions.</dd>
+                                    <dd>- Information display fixed.</dd>
+                                    <dd>- Spotify code reworked.</dd>
+                                    <dd>- Spotify alerts are more specific now.</dd>
+                            </dl>
+                            <a class="chico">If you enjoy this wallpaper please leave a like. And remember, if you want to leave a comment,<br>suggestion or report a bug, you can do it on the workshop page. Every single comment matters, always!</a>
+                        `
+                    );
+                }
+            }
             // Visualizer Color
             if (properties.visColor) {
                 if (properties.visColor.value) {
+                    cancion.nombre = "";
+                    cancion.artista = "";
+                    cancion.caratula = "";
                     setColor(audio_ctx, properties.visColor.value, true);
                     setColor(spotify_ctx, properties.visColor.value, true);
                 }
@@ -131,13 +135,10 @@ window.onload = function () {
                     inclinada_ctx.fillRect(-189, 400, 780, 2300);
                 }
             }
-            if (properties.invertSideBar){
-                //properties.invertSideBar.value ? reescalarUI(true) : reescalarUI(false); // UI resizer for multiple resolutions + invertion check...
-            }
             // Display Day
             if (properties.displayDay) {
                 if (properties.displayDay.value) {
-                    document.getElementById("monthYear").style.display = "block";
+                    document.getElementById("monthYear").style.display = "inline-block";
                 } else {
                     document.getElementById("monthYear").style.display = "none";
                 }
@@ -145,16 +146,16 @@ window.onload = function () {
             // Display Calendar
             if (properties.displayCalendar) {
                 if (properties.displayCalendar.value) {
-                    document.getElementById("calendario").style.display = "block";
+                    document.getElementById("contenedorCalendario").style.display = "block";
                     dibujarCalendario();
                 } else {
-                    document.getElementById("calendario").style.display = "none";
+                    document.getElementById("contenedorCalendario").style.display = "none";
                 }
             }
             // Display Clock
             if (properties.displayClock) {
                 if (properties.displayClock.value) {
-                    document.getElementById("hora").style.display = "block";
+                    document.getElementById("hora").style.display = "inline-block";
                     dibujarHora();
                 } else {
                     document.getElementById("hora").style.display = "none";
@@ -205,21 +206,29 @@ window.onload = function () {
             // Display Schedule
             if (properties.displaySchedule) {
                 if (properties.displaySchedule.value) {
-                    document.getElementById("cronogramaTitulo").style.display = "block";
-                    document.getElementById("cronograma").style.display = "block";
+                    document.getElementById("cronogramaTitulo").style.display = "table";
+                    document.getElementById("cronograma").style.display = "table";
+                    document.getElementById("contenedorCronogramaNotas").display = "block";
                     cargarCronograma();
                 } else {
                     document.getElementById("cronogramaTitulo").style.display = "none";
                     document.getElementById("cronograma").style.display = "none";
+                    if (document.getElementById("notas").display != "block"){
+                        document.getElementById("contenedorCronogramaNotas").display = "none";
+                    }
                 }
             }
             // Display Notes
             if (properties.displayNotes) {
                 if (properties.displayNotes.value) {
+                    document.getElementById("contenedorCronogramaNotas").display = "none";
                     document.getElementById("notas").style.display = "block";
                     cargarNotas();
                 } else {
                     document.getElementById("notas").style.display = "none";
+                    if (document.getElementById("cronograma").display != "block"){
+                        document.getElementById("contenedorCronogramaNotas").display = "none";
+                    }
                 }
             }
             // Copy Schedule
@@ -241,7 +250,7 @@ window.onload = function () {
             // Display Spotify
             if (properties.spotifyAPI) {
                 if (properties.spotifyAPI.value) {
-                    spotifyData.inicialiar = true;
+                    spotifyData.inicializar = true;
                     if (properties.spotifyClientID) {
                         if (properties.spotifyClientID.value != "") {
                             spotifyData.clienteID = properties.spotifyClientID.value;
@@ -337,7 +346,12 @@ window.onload = function () {
         let canvasShadow = document.createElement("canvas");
         canvasCharacter.id = "personaje";
         canvasShadow.id = "sombra";
-        ubicacion !== "" || ubicacion !== undefined ? ubicacion = "file:///"+ubicacion : ubicacion = "files/AsukaForegroundAsuka.png";
+        if (ubicacion === "undefined" || ubicacion === undefined || ubicacion === ""){
+            ubicacion = "files/AsukaForegroundAsuka.png";
+        } else {
+            console.log(ubicacion);
+            ubicacion = "file:///"+ubicacion;
+        }
         let img = document.createElement("img");
         img.onload = function(){
             // Why removing? Because the next time someone loads an image, it will break... Better remove, just in case!
@@ -388,22 +402,6 @@ window.onload = function () {
         firstLoad = true;
     }
 
-    /*
-        ----------
-        UI RESIZER
-        ----------
-    */
-    var informacionLateral = document.getElementById("informacionLateral");
-    var alturaOrg = informacionLateral.offsetHeight, // Original Height
-        nuevaAltura = (window.innerHeight * alturaOrg) / 1080,
-        porcentajeNuevo = Math.round((nuevaAltura * 100) / alturaOrg);
-        informacionLateral.style.transform = "scale("+porcentajeNuevo/100+")";
-    var coordenadasInformacionLateral = informacionLateral.getBoundingClientRect();
-    var paddingLeft = -Math.round(coordenadasInformacionLateral.left)*1.5 + ((1*window.innerWidth)/100);
-    var paddingTop = -Math.round(coordenadasInformacionLateral.top)*1.5 + ((4*window.innerHeight)/100);
-    informacionLateral.style.left = paddingLeft+"px";
-    informacionLateral.style.top = paddingTop+"px";
-
     function moveCharacter(cx, cy, sx, sy){
         if (cx !== false){
             characterX = cx;
@@ -422,6 +420,7 @@ window.onload = function () {
             document.getElementById("sombra").style.top = sy*1.5+"px";
         }
     }
+
 
     /*
     	--------
@@ -464,6 +463,7 @@ window.onload = function () {
 
         marcarCalendario();
         document.getElementById("informacionLateral").style.opacity = 1;
+        
     }
 
     function marcarCalendario() {
@@ -513,7 +513,7 @@ window.onload = function () {
                 climaActual();
             }
         }
-        if (spotifyData.inicialiar) spotifyAPI.request();
+        if (spotifyData.inicializar) spotifyAPI.request();
     }
     
     let inclinada_canvas = document.getElementById("inclinada");
@@ -521,6 +521,7 @@ window.onload = function () {
     inclinada_ctx.translate(0, 1900);
     inclinada_ctx.rotate(Math.PI / 180 * (-118.3));
 
+    
     /*
             -----------
             WEATHER API
@@ -753,7 +754,7 @@ window.onload = function () {
 
         document.getElementById("notas").innerHTML = "";
         notesPlain.map(function (note) {
-            document.getElementById("notas").innerHTML += "<a>" + note + "</a>";
+            document.getElementById("notas").innerHTML += "<a>" + note + "</a><br>";
         });
     }
 
@@ -876,7 +877,7 @@ window.onload = function () {
      */
     // All of this should be initialized on properties, but the variables should remain here!
     var spotifyData = {
-        inicialiar: false,
+        inicializar: false,
         activo: true,
         clienteID: "",
         clienteSecreto: "",
@@ -957,24 +958,26 @@ window.onload = function () {
             }).catch(error => {});
         },
         request: async () => {
-            await fetch("https://api.spotify.com/v1/me/player/currently-playing?market=us", {
+            if (spotifyData.inicializar){
+                await fetch("https://api.spotify.com/v1/me/player/currently-playing?market=us", {
                 method: "GET",
                 headers: {
                     "Accept": "application/json",
                     "Content-Type": "application/json",
                     "Authorization": localStorage.getItem("token_type") + " " + localStorage.getItem("access_token")
                 },
-            }).then(respuesta => {
-                if (respuesta.status !== 204){
-                    (respuesta.json()).then((datos) => {
-                        if (datos.error === undefined) {
-                            spotifyAPI.process(datos.is_playing, /*datos.progress_ms, datos.item.duration_ms,*/datos.item.name, datos.item.album.images[1].url, datos.item.album.name, datos.item.artists[0].name);
-                        } else {
-                            spotifyAPI.refresh();
-                        }
-                    }).catch(error => {});
-                }
-            }).catch(error => {});
+                }).then(respuesta => {
+                    if (respuesta.status !== 204){
+                        (respuesta.json()).then((datos) => {
+                            if (datos.error === undefined) {
+                                spotifyAPI.process(datos.is_playing, /*datos.progress_ms, datos.item.duration_ms,*/datos.item.name, datos.item.album.images[1].url, datos.item.album.name, datos.item.artists[0].name);
+                            } else {
+                                spotifyAPI.refresh();
+                            }
+                        }).catch(error => {});
+                    }
+                }).catch(error => {});
+            }
         },
         process: async (reproduciendo, /*progreso, duracion,*/nombre, caratula, album, artista) => {
             if (reproduciendo) {
@@ -1039,7 +1042,7 @@ window.onload = function () {
             */
         },
         stop: () => {
-            spotifyData.inicialiar = false;
+            spotifyData.inicializar = false;
             spotify_ctx.clearRect(-30, -30, 1920, 230);
             cancion.nombre = "";
         }
